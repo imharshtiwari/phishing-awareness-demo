@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Demo Login Page - Awareness Only</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>InstaLook Login</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #fafafa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      height: 100vh;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-    .login-box {
-      background: white;
-      padding: 30px;
+    .container {
+      background-color: white;
+      padding: 40px 30px;
+      border: 1px solid #dbdbdb;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       width: 300px;
+      text-align: center;
     }
-    .login-box h2 {
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #262626;
       margin-bottom: 20px;
     }
     input[type="text"],
     input[type="password"] {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      box-sizing: border-box;
+      margin: 6px 0;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      background-color: #fafafa;
     }
     button {
       width: 100%;
       padding: 10px;
-      background-color: #007bff;
+      background-color: #3897f0;
       color: white;
       border: none;
       border-radius: 4px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
     }
-    .warning {
-      margin-top: 20px;
+    .disclaimer {
       font-size: 12px;
-      color: red;
+      color: #999;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>Login</h2>
+  <div class="container">
+    <div class="logo">📸 SnapLogin</div>
     <form onsubmit="handleLogin(event)">
-      <input type="text" placeholder="Username" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
+      <input type="text" placeholder="Phone number, username, or email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
     </form>
-    <div class="warning">
-      ⚠️ This is a demo page for educational awareness. Do NOT enter real credentials.
+    <div class="disclaimer">
+      ⚠️ This is a simulated login page for awareness purposes only. <br>
+      No data is stored.
     </div>
   </div>
 
   <script>
     function handleLogin(event) {
       event.preventDefault();
-      alert("Credentials captured. This is just a simulation for awareness.");
+      const username = event.target[0].value;
+      const password = event.target[1].value;
+      alert(`Captured (Simulated):\nUsername: ${username}\nPassword: ${password}`);
     }
   </script>
 </body>
