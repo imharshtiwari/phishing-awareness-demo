@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>InstaLook Login</title>
+  <title>SnapLogin - Awareness Demo</title>
   <style>
     body {
       background-color: #fafafa;
@@ -36,7 +36,7 @@
       border-radius: 4px;
       background-color: #fafafa;
     }
-    button {
+    button.login-btn {
       width: 100%;
       padding: 10px;
       background-color: #3897f0;
@@ -47,6 +47,34 @@
       margin-top: 10px;
       cursor: pointer;
     }
+
+    .or-separator {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .or-separator hr {
+      flex: 1;
+      border: none;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+    .or-separator span {
+      margin: 0 10px;
+      font-size: 12px;
+      color: #8e8e8e;
+      font-weight: 600;
+    }
+
+    .facebook-login {
+      color: #385185;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: not-allowed;
+      user-select: none;
+    }
+
     .disclaimer {
       font-size: 12px;
       color: #999;
@@ -56,15 +84,22 @@
 </head>
 <body>
   <div class="container">
-    <div class="logo">📸 SnapLogin</div>
+    <div class="logo">𝐼𝓃𝓈𝓉𝒶𝑔𝓇𝒶𝓂</div>
     <form onsubmit="handleLogin(event)">
       <input type="text" placeholder="Phone number, username, or email" required />
       <input type="password" placeholder="Password" required />
-      <button type="submit">Log In</button>
+      <button class="login-btn" type="submit">Log In</button>
     </form>
+
+    <div class="or-separator">
+      <hr><span>OR</span><hr>
+    </div>
+
+    <div class="facebook-login">Log in with Facebook</div>
+
     <div class="disclaimer">
-      ⚠️ This is a simulated login page for awareness purposes only. <br>
-      No data is stored.
+       This is a simulated login page for awareness purposes .<br>
+      Do NOT enter real credentials.
     </div>
   </div>
 
